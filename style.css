@@ -1,0 +1,64 @@
+/*
+Theme Name: Kiyomizu
+Template: twentyfifteen
+Text Domain: kiyomizu
+Description: This theme has 2column post list. Customized Twenty Fifteen Theme 
+Theme URI: http://hideokamoto.github.io/wp-theme-kiyomizu
+Author: Hidetaka Okamoto
+Author URI: https://wp-kyoto.net/
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+@import url('../twentyfifteen/style.css');
+
+
+@media screen and (min-width: 59.6875em){
+
+.blog .hentry,
+.archive .hentry {
+    width: 45%;
+    display: inline-block;
+    margin-left: 4%;
+    margin-right: 4%;
+    vertical-align: top;
+}
+
+.blog .site-main,
+.archive .site-main {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.blog .page-header,
+.archive .page-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.blog .hentry:nth-child(2n+1),
+.archive .hentry:nth-child(2n+2) {
+    margin-left: 0;
+}
+.blog .hentry:nth-child(2n+2),
+.archive .hentry:nth-child(2n+1) {
+    margin-right: 0;
+}
+.blog .hentry:nth-child(2) {
+    margin-top: 0;
+}
+
+}
+@media screen and (min-width: 87.6875em){
+body:before {
+	width: -wetbkit-calc(50% - 360px);
+	width: calc(50% - 360px);
+}
+.site {
+    max-width: 2000px;
+}
+.sidebar {
+	max-width: none;
+}
+}
