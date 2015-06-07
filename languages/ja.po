@@ -1,0 +1,50 @@
+# Copyright (C) 2015 Hidetaka Okamoto
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kiyomizu 1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/kiyomizu\n"
+"POT-Creation-Date: 2015-05-19 05:46:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-06-07 14:43+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. #-#-#-#-#  kiyomizu.pot (Kiyomizu 1.2)  #-#-#-#-#
+#. Theme URI of the plugin/theme
+#: functions.php:38
+msgid "http://hideokamoto.github.io/wp-theme-kiyomizu"
+msgstr "http://hideokamoto.github.io/wp-theme-kiyomizu"
+
+#: functions.php:39
+msgid "This theme was made by"
+msgstr "This theme was made by"
+
+#. #-#-#-#-#  kiyomizu.pot (Kiyomizu 1.2)  #-#-#-#-#
+#. Author of the plugin/theme
+#: functions.php:40
+msgid "Hidetaka Okamoto"
+msgstr "岡本秀高"
+
+#: functions.php:42
+msgid "Theme: %1$s by %2$s"
+msgstr "Theme: %1$s by %2$s"
+
+#: functions.php:47
+msgid "Kiyomizu Content Widget"
+msgstr "記事内ウィジェット"
+
+#. Theme Name of the plugin/theme
+msgid "Kiyomizu"
+msgstr "Kiyomizu"
+
+#. Description of the plugin/theme
+msgid "This theme has 2column post list. Customized Twenty Fifteen Theme"
+msgstr "Twenty Fifteenの記事リストを２カラムにしたテーマです。"
+
+#. Author URI of the plugin/theme
+msgid "https://wp-kyoto.net/"
+msgstr "https://wp-kyoto.net/"

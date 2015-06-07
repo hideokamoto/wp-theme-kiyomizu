@@ -1,6 +1,6 @@
 === Kiyomizu ===
 Parent Theme: twentyfifteen
-Version: 1.2
+Version: 1.3
 Author: Hidetaka Okamoto
 Theme URI: http://hideokamoto.github.io/wp-theme-kiyomizu
 Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -25,3 +25,14 @@ This theme extend default theme "Twenty Fifteen".In PC views,this theme exchange
 
 This theme is Twenty Fifteen's child Theme.
 So, you can use every Twenty Fifteen's functions.
+
+== Changelog ==
+
+= 1.2 =
+* Transition Ready.
+
+= 1.1 =
+* Add Widget.
+
+= 1.0 =
+* Theme Released.

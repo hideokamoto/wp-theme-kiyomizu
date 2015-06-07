@@ -6,7 +6,12 @@ kiyomizu_widget_settings();
 //hooks
 add_filter( 'the_content'         , 'kiyomizu_the_content_filter' );
 add_action('twentyfifteen_credits', 'kiyomizu_declare_copyright');
+add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
 
+function kiyomizu_i18n(){
+  $theme_uri = get_stylesheet_directory(). "/languages";
+  load_child_theme_textdomain( 'kiyomizu', $theme_uri );
+}
 
 function kiyomizu_the_content_filter( $content ) {
     if ( is_home() || is_archive() ){
@@ -39,7 +44,7 @@ function kiyomizu_declare_copyright(){
 
 function kiyomizu_widget_settings(){
     register_sidebar(array(
-	      'name' => sprintf(__('Kiyomizu Content Widget', 'kiyomizu')),
+	      'name' => __('Kiyomizu Content Widget', 'kiyomizu'),
 	      'id'   => 'Kiyomizu-content_widget'
       )
     );
