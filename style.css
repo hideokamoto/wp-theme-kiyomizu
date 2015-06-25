@@ -14,60 +14,73 @@ Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, 
 @import url('../twentyfifteen/style.css');
 
 .kiyomizu-content-top-widget {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .kiyomizu-content-top-widget > li{
-    padding: 0 ;
-    margin-bottom: 1rem;
+	padding: 0 ;
+	margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 59.6875em){
+		.blog .site-main,
+		.archive .site-main {
+			overflow: hidden;
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			-ms-column-count: 2;
+			-o-column-count: 2;
+			-webkit-column-gap: 50px;
+			-moz-column-gap: 50px;
+			-ms-column-gap: 50px;
+			-o-column-gap: 50px;
+		}
 
-    .blog .hentry,
-    .archive .hentry {
-        width: 45%;
-        display: inline-block;
-        margin-left: 4%;
-        margin-right: 4%;
-        vertical-align: top;
-    }
+	.blog .hentry,
+	.archive .hentry {
+				margin: 10px 0;
+		display: inline-block;
+		vertical-align: top;
+	}
 
-    .blog .site-main,
-    .archive .site-main {
-        padding-left: 8%;
-        padding-right: 8%;
-    }
+	.blog .site-main,
+	.archive .site-main {
+		padding-left: 8%;
+		padding-right: 8%;
+	}
 
-    .blog .page-header,
-    .archive .page-header {
-        margin-left: 0;
-        margin-right: 0;
-    }
+	.blog .page-header,
+	.archive .page-header {
+		margin-left: 0;
+		margin-right: 0;
+	}
 
-    .blog .hentry:nth-child(2n+1),
-    .archive .hentry:nth-child(2n+2) {
-        margin-left: 0;
-    }
-    .blog .hentry:nth-child(2n+2),
-    .archive .hentry:nth-child(2n+1) {
-        margin-right: 0;
-    }
-    .blog .hentry:nth-child(2) {
-        margin-top: 0;
-    }
+	.blog .hentry:nth-child(2n+1),
+	.archive .hentry:nth-child(2n+2) {
+		margin-left: 0;
+	}
+	.blog .hentry:nth-child(2n+2),
+	.archive .hentry:nth-child(2n+1) {
+		margin-right: 0;
+	}
+	.blog .hentry:nth-child(2) {
+		margin-top: 0;
+	}
+		.pagination{
+			margin: 10px auto;
+		}
 
 
 }
 @media screen and (min-width: 87.6875em){
-    body:before {
-    	width: -wetbkit-calc(50% - 360px);
-    	width: calc(50% - 360px);
-    }
-    .site {
-        max-width: 2000px;
-    }
-    .sidebar {
-    	max-width: none;
-    }
+	body:before {
+		width: -wetbkit-calc(50% - 360px);
+		width: calc(50% - 360px);
+	}
+	.site {
+		max-width: 2000px;
+	}
+	.sidebar {
+		max-width: none;
+	}
 }
