@@ -1,6 +1,6 @@
 === Kiyomizu ===
 Parent Theme: twentyfifteen
-Version: 1.3
+Version: 1.4
 Author: Hidetaka Okamoto
 Theme URI: http://hideokamoto.github.io/wp-theme-kiyomizu
 Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -28,11 +28,17 @@ So, you can use every Twenty Fifteen's functions.
 
 == Changelog ==
 
-= 1.2 =
+= 1.4 =
+* Change CSS3 Column Layout
+
+= 1.3 =
 * Transition Ready.
 
-= 1.1 =
+= 1.2 =
 * Add Widget.
+
+= 1.1 =
+* Fix Bugs.
 
 = 1.0 =
 * Theme Released.
