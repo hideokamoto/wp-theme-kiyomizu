@@ -7,6 +7,8 @@ kiyomizu_widget_settings();
 add_filter( 'the_content'         , 'kiyomizu_the_content_filter' );
 add_action('twentyfifteen_credits', 'kiyomizu_declare_copyright');
 add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
+add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueue_styles' );
+
 
 function kiyomizu_i18n(){
   $theme_uri = get_stylesheet_directory(). "/languages";
@@ -48,4 +50,9 @@ function kiyomizu_widget_settings(){
 	      'id'   => 'Kiyomizu-content_widget'
       )
     );
+}
+
+function kiyomizu_theme_enqueue_styles() {
+    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+
 }
