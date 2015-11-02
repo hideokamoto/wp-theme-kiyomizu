@@ -2,10 +2,10 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Kiyomizu 1.2\n"
+"Project-Id-Version: Kiyomizu 1.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/kiyomizu\n"
 "POT-Creation-Date: 2015-05-19 05:46:39+00:00\n"
-"MIME-Version: 1.0\n"
+"MIME-Version: 1.4\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-05-19 14:51+0900\n"

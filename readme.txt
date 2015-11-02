@@ -42,3 +42,7 @@ So, you can use every Twenty Fifteen's functions.
 
 = 1.0 =
 * Theme Released.
+
+== Contributer ==
+
+* [Mayo Moriyama](https://profiles.wordpress.org/mayukojpn)
