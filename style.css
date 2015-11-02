@@ -37,9 +37,10 @@ Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, 
 
 	.blog .hentry,
 	.archive .hentry {
-				margin: 10px 0;
+		margin: 10px 0;
 		display: inline-block;
 		vertical-align: top;
+		width: 100%;
 	}
 
 	.blog .site-main,
