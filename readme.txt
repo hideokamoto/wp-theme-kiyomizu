@@ -1,12 +1,12 @@
 === Kiyomizu ===
 Parent Theme: twentyfifteen
-Version: 1.4
+Version: 1.5
 Author: Hidetaka Okamoto
 Theme URI: http://hideokamoto.github.io/wp-theme-kiyomizu
 Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Requires at least: 4.1
-Tested up to: 4.2
-Stable tag: 4.2
+Tested up to: 4.4.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ So, you can use every Twenty Fifteen's functions.
 
 == Changelog ==
 
+= 1.5 =
+* Show Related Post using WP REST API
+
 = 1.4 =
 * Change CSS3 Column Layout
 
@@ -46,3 +49,8 @@ So, you can use every Twenty Fifteen's functions.
 == Contributer ==
 
 * [Mayo Moriyama](https://profiles.wordpress.org/mayukojpn)
+
+== Upgrade Notice ==
+
+= 1.5 =
+* Show Related Post using WP REST API
