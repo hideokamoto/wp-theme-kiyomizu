@@ -6,7 +6,7 @@ kiyomizu_widget_settings();
 add_filter( 'the_content', 'kiyomizu_the_content_filter' );
 add_action( 'twentyfifteen_credits', 'kiyomizu_declare_copyright' );
 add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
-add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueues' );
 
 
 function kiyomizu_i18n() {
@@ -23,7 +23,15 @@ function kiyomizu_the_content_filter( $content ) {
 			dynamic_sidebar( 'Kiyomizu Content Widget' );
 			echo '</ul>';
 		}
+		$content .= kiyomizu_related_post();
 	}
+	return $content;
+}
+
+function kiyomizu_related_post() {
+	$content  = '';
+	$content .= 'related';
+
 	return $content;
 }
 
@@ -51,6 +59,7 @@ function kiyomizu_widget_settings() {
 	);
 }
 
-function kiyomizu_theme_enqueue_styles() {
+function kiyomizu_theme_enqueues() {
+	wp_enqueue_script( 'kiyomizu-scripts', get_stylesheet_directory_uri() .'/app.js' , array(), '20160130', true );
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
