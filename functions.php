@@ -7,11 +7,21 @@ add_filter( 'the_content', 'kiyomizu_the_content_filter' );
 add_action( 'twentyfifteen_credits', 'kiyomizu_declare_copyright' );
 add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
 add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueues' );
-
+add_action( 'admin_init', 'kiyomizu_check_rest_api' );
 
 function kiyomizu_i18n() {
 	$theme_uri = get_stylesheet_directory(). '/languages';
 	load_child_theme_textdomain( 'kiyomizu', $theme_uri );
+}
+
+function kiyomizu_check_rest_api() {
+	if( ! is_plugin_active( 'rest-api/plugin.php' ) ) {
+		$message = __( 'Kiyomizu Theme need WP REST API(Version2) Plugin.' , 'kiyomizu' );
+		$html  = "<div class='notice updated'><ul>";
+		$html .= "<li>{$message}</li>";
+		$html .= '</ul></div>';
+		echo $html;
+	}
 }
 
 function kiyomizu_the_content_filter( $content ) {
