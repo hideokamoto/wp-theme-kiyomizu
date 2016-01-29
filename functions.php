@@ -46,7 +46,7 @@ function kiyomizu_get_api_data() {
 	$api_url = home_url( '/' ). 'wp-json/wp/v2/posts' . $query ;
 	$api_url = apply_filters( 'rest-widgets-postlist-query' , $api_url );
 	$api_url = esc_url( $api_url );
-	$fail_text = __( 'Fail to get POST Data.', 'rest-api-widgets' );
+	$fail_text = __( 'Fail to get POST Data.', 'kiyomizu' );
 	$data = "data-postlist-url='{$api_url}' data-fail-text='{$fail_text}'";
 	return $data;
 }
