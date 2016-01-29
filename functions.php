@@ -30,9 +30,25 @@ function kiyomizu_the_content_filter( $content ) {
 
 function kiyomizu_related_post() {
 	$content  = '';
-	$content .= 'related';
-
+	$data = kiyomizu_get_api_data();
+	$content .= "<div class='kiyumizu-related-post-row'>";
+	$content .= "<h2 class='entry-title'>". __( 'Similar Category Post' , 'kiyomizu' ) . '</h2>';
+	$content .= "<div id='kiyomizu-related-post' {$data}></div>";
+	$content .= '</div>';
 	return $content;
+}
+
+function kiyomizu_get_api_data() {
+	$category = get_the_category( get_the_ID() );
+	$query  = '?filter[category_name]=' . $category[0]->slug;
+	$query .= '&filter[posts_per_page]=5';
+
+	$api_url = home_url( '/' ). 'wp-json/wp/v2/posts' . $query ;
+	$api_url = apply_filters( 'rest-widgets-postlist-query' , $api_url );
+	$api_url = esc_url( $api_url );
+	$fail_text = __( 'Fail to get POST Data.', 'rest-api-widgets' );
+	$data = "data-postlist-url='{$api_url}' data-fail-text='{$fail_text}'";
+	return $data;
 }
 
 function kiyomizu_make_excerpt( $content ) {
