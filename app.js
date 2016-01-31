@@ -1,8 +1,9 @@
 (function($) {
-	if( $('#kiyomizu-related-post')[0] ){
+	$relatedPost = $('#kiyomizu-related-post');
+	if( $relatedPost.length ){
 		$.ajax({
 				type: 'GET',
-				url: $('#kiyomizu-related-post').data('postlist-url'),
+				url:  $relatedPost.data('postlist-url'),
 				dataType: 'json'
 		}).done(function(json){
 			var html = '<ul>';
@@ -15,9 +16,9 @@
 				html += '</li>';
 			}
 			html += '</ul>';
-			$('#kiyomizu-related-post').append(html);
-		}).fail(function(json){
-			$('#kiyomizu-related-post').append($('#kiyomizu-related-post').data('fail-text'));
+			$relatedPost.append(html);
+		}).fail(function(jqXHR, textMessage, errorThrown ){
+			$relatedPost.append($relatedPost.data('fail-text'));
 		});
 	}
 })(jQuery);
