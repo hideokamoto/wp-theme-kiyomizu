@@ -21,6 +21,27 @@ Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, 
 	margin-bottom: 1rem;
 }
 
+.kiyumizu-related-post-row {
+	font-size: .8em;
+}
+
+.kiyumizu-related-post-row li {
+	list-style: none;
+}
+
+.kiyumizu-related-post-row a {
+	border-bottom: none;
+}
+
+.kiyumizu-related-post-row p {
+	color: rgb(94, 94, 94);
+}
+
+
+.kiyumizu-related-post-row a.more-link:hover {
+	border-bottom: 1px solid black;
+}
+
 @media screen and (min-width: 59.6875em){
 		.blog .site-main,
 		.archive .site-main {
