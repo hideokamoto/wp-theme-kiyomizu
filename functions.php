@@ -107,6 +107,6 @@ function kiyomizu_widget_settings() {
 }
 
 function kiyomizu_theme_enqueues() {
-	wp_enqueue_script( 'kiyomizu-scripts', get_stylesheet_directory_uri() .'/app.js' , array(), '20160130', true );
+	wp_enqueue_script( 'kiyomizu-scripts', get_stylesheet_directory_uri() .'/app.js' , array(), '1.5.1', true );
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
