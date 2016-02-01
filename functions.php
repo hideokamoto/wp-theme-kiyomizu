@@ -3,20 +3,33 @@
 kiyomizu_widget_settings();
 
 //hooks
-add_filter( 'the_content', 'kiyomizu_the_content_filter' );
+add_filter( 'the_content', 'kiyomizu_the_content_filter', 15 );
 add_action( 'twentyfifteen_credits', 'kiyomizu_declare_copyright' );
 add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
 add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueues' );
 add_action( 'admin_init', 'kiyomizu_check_rest_api' );
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 function kiyomizu_i18n() {
 	$theme_uri = get_stylesheet_directory(). '/languages';
 	load_child_theme_textdomain( 'kiyomizu', $theme_uri );
 }
 
+function kiyomizu_is_restapi_enabled () {
+	// There are maybe better way
+	return  is_plugin_active( 'rest-api/plugin.php' );
+}
+
 function kiyomizu_check_rest_api() {
-	if( ! is_plugin_active( 'rest-api/plugin.php' ) ) {
-		$message = __( 'Kiyomizu Theme need WP REST API(Version2) Plugin.' , 'kiyomizu' );
+	if( ! kiyomizu_is_restapi_enabled() && current_user_can( 'install_plugins' ) && ! is_customize_preview() ) {
+		$message = sprintf(
+			__( 'Kiyomizu Theme need %s Plugin.' , 'kiyomizu' ),
+			sprintf(
+				'<a href="%s">WP REST API(Version2)</a>',
+				__( 'https://wordpress.org/plugins/rest-api/', 'kiyomizu' )
+			)
+		);
 		$html  = "<div class='notice updated'><ul>";
 		$html .= "<li>{$message}</li>";
 		$html .= '</ul></div>';
@@ -25,16 +38,24 @@ function kiyomizu_check_rest_api() {
 }
 
 function kiyomizu_the_content_filter( $content ) {
-	if ( is_home() || is_archive() ) {
+
+	if ( in_array( 'get_the_excerpt', (array) $GLOBALS['wp_current_filter'] ) ){
+		return $content;
+	} elseif ( is_home() || is_archive() ) {
 		$content = kiyomizu_make_excerpt( $content );
+
 	} elseif ( is_page() || is_single() ) {
 		if ( is_dynamic_sidebar( 'Kiyomizu Content Widget' ) ) {
 			echo "<ul class='kiyomizu-content-top-widget'>";
 			dynamic_sidebar( 'Kiyomizu Content Widget' );
 			echo '</ul>';
 		}
-		$content .= kiyomizu_related_post();
+
+		if(kiyomizu_is_restapi_enabled()) {
+			$content .= kiyomizu_related_post();
+		}
 	}
+
 	return $content;
 }
 
