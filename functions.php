@@ -7,7 +7,7 @@ add_filter( 'the_content', 'kiyomizu_the_content_filter', 15 );
 add_action( 'twentyfifteen_credits', 'kiyomizu_declare_copyright' );
 add_action( 'after_setup_theme'   , 'kiyomizu_i18n' );
 add_action( 'wp_enqueue_scripts'  , 'kiyomizu_theme_enqueues' );
-add_action( 'admin_init', 'kiyomizu_check_rest_api' );
+add_action( 'admin_notices', 'kiyomizu_check_rest_api' );
 
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
